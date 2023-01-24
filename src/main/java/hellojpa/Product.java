@@ -16,7 +16,7 @@
 //
 //    private String name;
 //
-//    @OneToMany(mappedBy = "product")
+//    @OneToMany(mappedBy = "products")
 //    private List<MemberProduct> memberProduct = new ArrayList<>();
 //
 //    public Long getId() {

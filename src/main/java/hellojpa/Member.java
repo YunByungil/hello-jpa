@@ -5,7 +5,7 @@
 //import java.util.List;
 //
 //@Entity
-//public class Member {
+//public class Member extends BaseEntity {
 //
 //    @Id @GeneratedValue
 //    @Column(name = "MEMBER_ID")
@@ -21,7 +21,7 @@
 //    @JoinColumn(name = "LOCKER_ID")
 //    private Locker locker;
 //
-//    @OneToMany(mappedBy = "member")
+//    @OneToMany(mappedBy = "members")
 //    private List<MemberProduct> memberProducts = new ArrayList<>();
 //
 //    public Long getId() {
