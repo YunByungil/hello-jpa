@@ -1,5 +1,8 @@
 package hellojpa;
 
+import hellojpa.jpabook.jpashop.domain.Member;
+import hellojpa.jpabook.jpashop.domain.Order;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
@@ -14,12 +17,10 @@ public class JpaMain {
         EntityTransaction tx = em.getTransaction();
         tx.begin();
         try {
-//            Member findMember = em.find(Member.class, 1L);
-            List<Member> result = em.createQuery("select a from Member as a", Member.class)
-                    .getResultList();
-            for (Member member : result) {
-                System.out.println("member.getName() = " + member.getName());
-            }
+            Order order = em.find(Order.class, 1L);
+            Long memberId = order.getMemberId();
+
+            Member member = em.find(Member.class, memberId);
 
 
             tx.commit();
