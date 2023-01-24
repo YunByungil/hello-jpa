@@ -1,8 +1,6 @@
 package hellojpa;
 
 
-import hellojpa.jpabook.jpashop.domain.Order;
-import hellojpa.jpabook.jpashop.domain.OrderItem;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -19,14 +17,17 @@ public class JpaMain {
         tx.begin();
         try {
 
-            Order order = new Order();
-            em.persist(order);
-//            order.addOrderItem(new OrderItem());
-
-            OrderItem orderItem = new OrderItem();
-            orderItem.setOrder(order);
-
-            em.persist(orderItem);
+//            Member member = new Member();
+//            member.setUsername("member1");
+//
+//            em.persist(member);
+//
+//            Team team = new Team();
+//            team.setName("teamA");
+//            //
+//            team.getMembers().add(member);
+//
+//            em.persist(team);
 
             tx.commit();
         } catch (Exception e) {
