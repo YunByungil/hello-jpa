@@ -1,9 +1,8 @@
 package hellojpa.jpabook.jpashop.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.OneToOne;
+import javax.persistence.*;
+
+import static javax.persistence.FetchType.*;
 
 @Entity
 public class Delivery extends BaseEntity{
@@ -11,7 +10,7 @@ public class Delivery extends BaseEntity{
     @Id @GeneratedValue
     private Long id;
 
-    @OneToOne(mappedBy = "delivery") // 양방향
+    @OneToOne(mappedBy = "delivery", fetch = LAZY) // 양방향
     private Order order;
 
     private String city;

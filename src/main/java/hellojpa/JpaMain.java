@@ -2,12 +2,11 @@ package hellojpa;
 
 
 
-import hellojpa.jpabook.jpashop.domain.Book;
 
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.EntityTransaction;
-import javax.persistence.Persistence;
+import hellojpa.jpabook.jpashop.domain.Book;
+import org.hibernate.Hibernate;
+
+import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -25,9 +24,11 @@ public class JpaMain {
 
             em.persist(book);
 
+
             tx.commit();
         } catch (Exception e) {
             tx.rollback();
+            e.printStackTrace();
         } finally {
             em.close();
         }
