@@ -1,5 +1,5 @@
-//package hellojpa.jpabook.jpashop.domain;
-//
-//public enum OrderStatus {
-//    ORDER, CANCEL
-//}
+package hellojpa.jpabook.jpashop.domain;
+
+public enum OrderStatus {
+    ORDER, CANCEL
+}

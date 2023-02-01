@@ -1,4 +1,4 @@
-//package hellojpa.jpabook.jpashop.domain;
-//
-//public enum DeliveryStatus {
-//}
+package hellojpa.jpabook.jpashop.domain;
+
+public enum DeliveryStatus {
+}
