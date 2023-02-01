@@ -1,23 +1,18 @@
 package hellojpa;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
-import java.util.ArrayList;
-import java.util.List;
 
 @Entity
-public class Product {
+public class Person {
 
-    @Id @GeneratedValue
+    @Id
+    @GeneratedValue
+    @Column(name = "person_id")
     private Long id;
-
-
     private String name;
-
-    @OneToMany(mappedBy = "products")
-    private List<MemberProduct> memberProduct = new ArrayList<>();
 
     public Long getId() {
         return id;
